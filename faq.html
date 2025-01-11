@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <style>
+        body {
+            font-family: 'Roboto Mono', monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .faq-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
+            text-align: left; /* Align text to the left */
+        }
+
+        .column {
+            max-width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center; /* Center the header */
+        }
+
+        .column h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .column p {
+            font-size: 16px;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #5B2263;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .close-button:hover {
+            background-color: #d93636;
+        }
+    </style>
+</head>
+<body>
+    <button class="close-button" onclick="window.location.href='index.html'">X</button>
+    <div>
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-container">
+            <div class="column">
+                <h2>FAQs</h2>
+                <p><strong>Q. How to win the prize?</strong><br>A. Reach 10/10 friendship level with the bot.</p>
+                <p><strong>Q. How much does it cost per message?</strong><br>A. $0.10 per message.</p>
+            </div>
+            <div class="column">
+                <p><strong>Q. Do I need to connect a wallet?</strong><br>A. No, you only use Telegram.</p>
+                <p><strong>Q. How do I pay?</strong><br>A. Use the address provided when you start.</p>
+                <p>Read the <a href="docs.html">docs</a> for more details.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
