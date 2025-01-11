@@ -15,7 +15,7 @@
         body, html {
             height: 100%;
             overflow: hidden;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto Mono', monospace;
         }
 
         /* Video background styling */
@@ -36,13 +36,53 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 1; /* Ensure it stays on top */
+            text-align: center;
         }
 
         .logo img {
             max-width: 200px;
             height: auto;
         }
+
+        /* Button styling */
+        .buttons {
+            position: absolute;
+            bottom: 10%; /* Lower buttons further down */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Add space between buttons */
+        }
+
+        .buttons button {
+            padding: 7.5px 15px; /* Reduce size by 25% */
+            margin: 0;
+            border: none;
+            border-radius: 25px;
+            font-size: 15px; /* Reduce font size by 25% */
+            cursor: pointer;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+            opacity: 0.85; /* Make buttons slightly transparent */
+        }
+
+        .buttons button:first-child {
+            background-color: #5B2263;
+            color: white;
+        }
+
+        .buttons button:nth-child(2) {
+            background-color: white;
+            color: black;
+        }
+
+        .buttons button:hover {
+            background-color: rgba(255, 255, 255, 0.8); /* Make hover effect white with slight transparency */
+            color: black; /* Ensure text remains visible */
+            opacity: 1; /* Remove transparency on hover */
+        }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -57,5 +97,21 @@
         <img src="your-logo.png" alt="Logo">
     </div>
 
+    <!-- Buttons in the lower section -->
+    <div class="buttons">
+        <button onclick="window.location.href='https://t.me/xiyaaibot'">Launch</button>
+        <button onclick="fadeInAndRedirect('faq.html')">FAQs</button>
+    </div>
+
+<script>
+    function fadeInAndRedirect(targetURL) {
+        const body = document.querySelector('body');
+        body.style.transition = 'opacity 0.5s ease-in';
+        body.style.opacity = '0';
+        setTimeout(() => {
+            window.location.href = targetURL;
+        }, 500);
+    }
+</script>
 </body>
 </html>
